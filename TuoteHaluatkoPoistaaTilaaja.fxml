@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.jyu.mit.fxgui.ModalController">
+   <center>
+      <Pane maxHeight="160.0" maxWidth="431.0" prefHeight="160.0" prefWidth="431.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="337.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleDefaultCancel" prefHeight="25.0" prefWidth="43.0" text="Ei" />
+            <Button layoutX="261.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleDefaultOK" text="Kyllä" />
+            <Label layoutX="47.0" layoutY="30.0" text="Haluatko varmasti poistaa tilaajan?">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

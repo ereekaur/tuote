@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane stylesheets="@tuote.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxtuote.TilaajaDialogController">
+   <bottom>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelVirhe" maxWidth="1000.0" />
+            <HBox />
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOK" text="OK" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+              </buttons>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <ScrollPane fx:id="panelTilaaja"  fitToWidth="true" pannable="true" BorderPane.alignment="CENTER">
+         <content>
+            <GridPane fx:id="gridTilaaja"   hgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="NEVER" minWidth="10.0" />
+                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="etunimi" />
+                  <Label text="sukunimi" GridPane.rowIndex="1" />
+                  <Label text="puhelinnumero" GridPane.rowIndex="2" />
+                  <Label text="osoite" GridPane.rowIndex="3" />
+                  <Label text="tilauksen hinta" GridPane.rowIndex="4" />
+                  <Label text="maksettu" GridPane.rowIndex="5" />
+                  <Label text="toimituspäivä" GridPane.rowIndex="6" />
+                  <TextField fx:id="editEtunimi"        text="Ankka Aku" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+                  <TextField fx:id="editSukunimi"        text="010245-123U" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <TextField fx:id="editPuhelinnumero"  text="040123123123" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <TextField fx:id="editOsoite" text="12345" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                  <TextField fx:id="editTilauksenhinta" text="12" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                  <TextField fx:id="maksettu" text="ei" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
+                  <TextField fx:id="editToimituspaiva" text="Sama" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+               <opaqueInsets>
+                  <Insets left="10.0" top="10.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

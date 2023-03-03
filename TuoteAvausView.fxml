@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="427.0" prefWidth="560.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="fxTuote.TuoteGUIController">
+   <center>
+      <BorderPane prefHeight="615.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+         <top>
+            <Label text="Haaparannan ostoslista" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <PasswordField layoutX="191.0" layoutY="213.0" />
+                  <Label layoutX="134.0" layoutY="143.0" text="Anna salasana jatkaaksesi">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="560.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handlePeruutaAvaus" text="Peruuta" />
+                  <Button mnemonicParsing="false" onAction="#handleOkAvaus" text="Ok" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>
